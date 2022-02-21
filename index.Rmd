@@ -39,8 +39,8 @@ options(knitr.kable.NA = '') # Hide NAs in kable table
 ```{r, results='asis', echo = FALSE}
 
 dat <- read_csv('./Menter.csv') %>%
-  as_data_frame() %>% 
-  filter(.$'相談相手役をお引き受けいただけますか？' == "可") %>% 
+  as_tibble() %>% 
+  #filter(.$'相談相手役をお引き受けいただけますか？' == "可") %>% 
   rename(
     "Schedule" = "以下の大会開催期間のうち、モアイ実施が可能な日程を選択ください。なお時間帯はお昼あるいは夕方以降など公式プログラムの自由時間にあたる期間を設定ください。",
     "Name" = "お名前",
@@ -51,7 +51,7 @@ dat <- read_csv('./Menter.csv') %>%
   ) %>% 
   select(Name, Keys, Message, HP, Photo_name, 申込フォーム) %>% 
   arrange(Photo_name) %>% 
-  as_data_frame()
+  as_tibble()
 
 
 # Loop for each menter (listed on "photo_name")
