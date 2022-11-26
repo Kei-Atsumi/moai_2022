@@ -6,6 +6,8 @@
 
 ## 2. このレポジトリをコピーしてR4年度学会用の新レポジトリを作る
 
+- https://blog.furu07yu.com/entry/github-clone-bare-repository
+
 ## 3. 以下サイトに従ってHP作成
 
 - https://kazutan.github.io/HijiyamaR6/rmd_de_github_site.html#/
